@@ -28,3 +28,12 @@ console.log(precioFiltro);
 
 const buscarNombre = productos.find(producto => producto.nombre === "Gorra");
 console.log(buscarNombre);
+const hayProducto = productos.some(producto => producto.precio > 10000);
+console.log(hayProducto);
+
+const todosMayor = productos.every(producto => producto.precio > 1000);
+console.log(todosMayor);
+const hayCamperoa = productos.includes("Campera");
+console.log(hayCamperoa);
+const ordenarPorPrecio = productos.sort();
+console.log(ordenarPorPrecio);
