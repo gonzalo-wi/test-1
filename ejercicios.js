@@ -16,3 +16,15 @@ productos.forEach(producto => {
     console.log(`Producto: ${producto.nombre}, Precio: ${producto.precio}`);
     
 });
+
+const nombresDeProductos = productos.map(producto => producto.nombre);
+console.log(nombresDeProductos);
+
+const categoriaFiltro = productos.filter(producto => producto.categoria === "Ropa");
+console.log(categoriaFiltro);
+
+const precioFiltro = productos.filter(producto => producto.precio > 3000);
+console.log(precioFiltro);
+
+const buscarNombre = productos.find(producto => producto.nombre === "Gorra");
+console.log(buscarNombre);
