@@ -33,7 +33,14 @@ console.log(hayProducto);
 
 const todosMayor = productos.every(producto => producto.precio > 1000);
 console.log(todosMayor);
-const hayCamperoa = productos.includes("Campera");
+const hayCamperoa = productos.includes(producto => producto.nombre === "Campera");
 console.log(hayCamperoa);
 const ordenarPorPrecio = productos.sort();
 console.log(ordenarPorPrecio);
+const nuevosProductos = [
+    { id: 6, nombre: "Bufanda", precio: 700, categoria: "Accesorios" },
+    { id: 7, nombre: "Sombrero", precio: 1800, categoria: "Accesorios" },
+    { id: 8, nombre: "Botas", precio: 12000, categoria: "Calzado" }
+];
+const todosLosProductos = [...productos, ...nuevosProductos];
+console.log(todosLosProductos);
